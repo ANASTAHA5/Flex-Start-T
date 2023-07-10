@@ -68,11 +68,15 @@ ul {
 
 /* Start Component */
 
+.title,
+.main-title {
+  display: block;
+  width: fit-content;
+}
+
 .title {
   color: var(--background-color);
   font-weight: normal;
-  display: block;
-  width: fit-content;
   margin: 0 auto;
   text-transform: uppercase;
   font-size: 14px;
@@ -80,8 +84,6 @@ ul {
 
 .main-title {
   color: var(--background-alt-color);
-  display: block;
-  width: fit-content;
   margin: 10px auto;
   font-size: 40px;
   font-weight: 700;
@@ -105,7 +107,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   height: 75px;
 }
 
@@ -288,7 +289,7 @@ ul {
   background-image: url(../img/backlanding.png);
   background-size: cover;
   background-attachment: fixed;
-  margin-top: 80px;
+  margin-top: 75px;
   padding-top: 50px;
 }
 
@@ -1096,11 +1097,12 @@ ul {
 
 .ask .container {
   display: flex;
+  justify-content: space-between;
   padding-top: 30px;
 }
 
 .ask .box {
-  margin-left: 25px;  
+  width: calc(50% - 10px); 
 }
 
 .ask .box div {
@@ -1191,36 +1193,36 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
-  z-index: 5;
-  transition: var(--main-transition);
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.679);
-  width: 80%;
-  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.679);
+  width: 80%;
+  height: 80%;
+  transition: calc(var(--main-transition) + 0.2s);
+  opacity: 0;
+  z-index: 5;
+}
+
+.portfolio .box .info::before,
+.portfolio .box .info::after {
+  content: '';
+  position: absolute;
+  width: 33px;
+  height: 33px;
 }
 
 .portfolio .box .info::before {
-  content: '';
-  position: absolute;
   left: 10px;
   top: 10px;
-  width: 33px;
-  height: 33px;
   border-top: 2px solid #ccc;
   border-left: 2px solid #ccc;
 }
 
 .portfolio .box .info::after {
-  content: '';
-  position: absolute;
   right: 10px;
   bottom: 10px;
-  width: 33px;
-  height: 33px;
   border-right: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
 }
