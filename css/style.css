@@ -3154,7 +3154,7 @@ ul {
   }
 
   .ask .box {
-    margin-left: 0;
+   width: 100%;
   }
 
   .ask .box div p {
