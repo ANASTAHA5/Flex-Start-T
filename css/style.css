@@ -441,10 +441,9 @@ ul {
 
 .value .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(288px , 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fill , minmax(358px , 1fr));
+  gap: 20px;
   padding-top: 30px;
-  max-width: 1330px;
 }
 
 .value .box {
@@ -490,9 +489,8 @@ ul {
 
 .counter .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
-  gap: 40px;
-  max-width: 1330px;
+  grid-template-columns: repeat(auto-fill , minmax(282px , 1fr));
+  gap: 20px;
 }
 
 .counter .box {
@@ -804,10 +802,9 @@ ul {
 
 .services .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(288px , 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fill , minmax(383px , 1fr));
+  gap: 20px;
   padding-top: 30px;
-  max-width: 1330px;
 }
 
 .services .box {
@@ -972,10 +969,9 @@ ul {
 
 .pricing .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(255px , 1fr));
+  grid-template-columns: repeat(auto-fill , minmax(278px , 1fr));
   gap: 25px;
   padding-top: 40px;
-  max-width: 1330px;
 }
 
 .pricing .box {
@@ -1146,10 +1142,9 @@ ul {
 
 .portfolio .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(288px , 1fr));
-  gap: 47px;
+  grid-template-columns: repeat(auto-fill , minmax(383px , 1fr));
+  gap: 20px;
   padding-top: 30px;
-  max-width: 1330px;
 }
 
 .portfolio ul {
@@ -1289,10 +1284,9 @@ ul {
 
 .testimonials .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(288px , 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fill , minmax(377px , 1fr));
+  gap: 30px;
   padding-top: 60px;
-  max-width: 1330px;
 }
 
 .testimonials .box {
@@ -1376,10 +1370,9 @@ ul {
 
 .team .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(255px , 1fr));
+  grid-template-columns: repeat(auto-fill , minmax(275px , 1fr));
   gap: 30px;
   padding-top: 30px;
-  max-width: 1330px;
 }
 
 .team .box {
@@ -1487,10 +1480,9 @@ ul {
 
 .clients .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(150px , 1fr));
+  grid-template-columns: repeat(auto-fill , minmax(162px , 1fr));
   gap: 60px;
   padding-top: 30px;
-  max-width: 1330px;
 }
 
 .clients .imags {
@@ -1539,10 +1531,9 @@ ul {
 
 .blog .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(288px , 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fill , minmax(383px , 1fr));
+  gap: 20px;
   padding-top: 30px;
-  max-width: 1330px;
 }
 
 .blog .box {
@@ -1597,6 +1588,10 @@ ul {
   position: absolute;
   bottom: 20px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
 }
 
 /* End Blog */
@@ -1612,6 +1607,7 @@ ul {
 .contact .container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding-top: 30px;
 }
 
@@ -1804,7 +1800,6 @@ ul {
   gap: 30px;
   padding-top: 30px;
   padding-bottom: 70px;
-  max-width: 1330px;
 }
 
 .footer .box {
@@ -2509,6 +2504,12 @@ ul {
 
 /* Media */
 
+@media (max-width:1419px) {
+  .portfolio .container {
+    grid-template-columns: repeat(auto-fill , minmax(275px , 1fr));
+  }
+}
+
 @media (max-width:1440px) {
   .main-title {
     text-align: center;
@@ -2528,16 +2529,19 @@ ul {
     transform: translateX(-50%);
   }
 
-  .portfolio .box .efect {
-    top: 70px;
-    right: 90px;
-    bottom: 70px;
-    left: 90px;
-  }
-
   .contact form input {
     padding: 10px;
     margin-right: 5px;
+  }
+}
+
+@media (max-width:1375px) {
+  .landing .intro h1 {
+    font-size: 38px;
+  }
+
+  .landing .intro h2 {
+    font-size: 22px;
   }
 }
 
@@ -2577,6 +2581,16 @@ ul {
 
 }
 
+@media (max-width:1270px) {
+  .services .container {
+    grid-template-columns: repeat(auto-fill , minmax(284px , 1fr));
+  }
+
+  .testimonials .container {
+    grid-template-columns: repeat(auto-fill , minmax(275px , 1fr));
+  }
+}
+
 @media (max-width:1150px) {
   .header .container .nav > li > a {
     font-size: 13px;
@@ -2611,13 +2625,6 @@ ul {
     width: 500px;
   }
 
-  .portfolio .box .efect {
-    top: 59px;
-    right: 77px;
-    bottom: 59px;
-    left: 77px;
-  }
-
   .feature .content {
     flex-direction: column;
     width: 100%;
@@ -2644,15 +2651,12 @@ ul {
     flex-direction: column-reverse;
   }
 
-  .learning .imags img {
-    width: 650px;
+  .learning .container .info {
+    text-align: center;
   }
 
-  .portfolio .box .efect {
-    top: 57px;
-    right: 76px;
-    bottom: 57px;
-    left: 76px;
+  .learning .imags img {
+    width: 650px;
   }
 
   ::-webkit-scrollbar {
@@ -2797,14 +2801,6 @@ ul {
     font-weight: normal;
   }
 
-  .ask .container {
-    flex-direction: column;
-  }
-
-  .portfolio .box:hover .efect {
-    transform: scale(1.6);
-  }
-
 
 }
 
@@ -2828,19 +2824,6 @@ ul {
     font-size: 25px;
   }
 
-  .value .container,
-  .counter .container,
-  .services .container,
-  .blog .container,
-  .testimonials .container {
-    gap: 30px;
-    margin-left: auto;
-  }
-
-  .pricing .container {
-    gap: 40px;
-  }
-
   .counter .box .number span {
     font-size: 30px;
   }
@@ -2861,10 +2844,6 @@ ul {
     font-size: 27px;
   }
 
-  .media .content {
-    flex-direction: column;
-  }
-
   .media .stats {
     margin-left: 0;
   }
@@ -2873,9 +2852,14 @@ ul {
     margin-bottom: -30px;
   }
 
-  .portfolio .box:hover .efect {
-    transform: scale(1.9);
+  .ask .container {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .ask .box {
+    width: 100%;
+   }
 
   .contact .information .box div {
     width: 250px;
@@ -2903,6 +2887,32 @@ ul {
 
 }
 
+@media (max-width:700px) {
+  .media .content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:659px) {
+  .testimonials .box.opacity {
+    display: none;
+  }
+
+  .counter .box {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .counter .box .number {
+    margin-left: 0;
+  }
+
+  .counter .box .number span {
+    font-size: 26px;
+  }
+}
+
 @media (max-width:600px) {
   .header .container {
     padding: 0;
@@ -2916,13 +2926,6 @@ ul {
 
   .portfolio ul li {
     margin-left: 5px;
-  }
-
-  .portfolio .box .efect {
-    top: 103px;
-    right: 118px;
-    bottom: 85px;
-    left: 118px;
   }
 
   .contact form input,
@@ -3059,15 +3062,6 @@ ul {
 
 }
 
-@media (max-width:500px) {
-  .portfolio .box .efect {
-    top: 70px;
-    right: 93px;
-    bottom: 79px;
-    left: 98px;
-  }
-}
-
 @media (max-width:440px) {
   .container {
     width: calc(100% - 15px);
@@ -3087,10 +3081,6 @@ ul {
 
   .main-title {
     font-size: 21px;
-  }
-
-  .counter .box {
-    flex-direction: column;
   }
 
   .counter .box .number {
@@ -3153,25 +3143,14 @@ ul {
     line-height: 1.3;
   }
 
-  .ask .box {
-   width: 100%;
-  }
-
   .ask .box div p {
     font-size: 17px;
     letter-spacing: 0.5px;
   }
 
-  .portfolio .container {
-    gap: 20px;
-  }
 
   .testimonials .box.scale {
     transform: scale(1);
-  }
-
-  .testimonials .box.opacity {
-    display: none;
   }
 
   .news .container input[type="submit"] {
@@ -3194,13 +3173,6 @@ ul {
     font-size: 25px;
   }
 
-  .portfolio .box .efect {
-    top: 71px;
-    right: 88px;
-    bottom: 72px;
-    left: 98px;
-  }
-
   .about .info h2 {
     font-size: 16px;
   }
@@ -3218,13 +3190,6 @@ ul {
 }
 
 @media (max-width:400px) {
-  .portfolio .box .efect {
-    top: 61px;
-    right: 78px;
-    bottom: 60px;
-    left: 78px;
-  }
-
   .about .info h2 {
     font-size: 15px;
   }
@@ -3274,7 +3239,17 @@ ul {
   }
 }
 
-@media (max-width:320px) {
+@media (max-width:376px) {
+  .value .container {
+    grid-template-columns: repeat(auto-fill , minmax(304px , 1fr));
+  }
+
+  .blog .container {
+    grid-template-columns: repeat(auto-fill , minmax(330px , 1fr));
+  }
+}
+
+@media (max-width:322px) {
   .header .logo span {
     font-size: 27px;
     letter-spacing: 1px;
@@ -3294,6 +3269,7 @@ ul {
 
   .main-title {
     font-size: 16px;
+    padding: 0 5px;
   }
 
   .landing .intro h1,
@@ -3326,13 +3302,6 @@ ul {
     font-size: 15px;
   }
 
-  .portfolio .box .efect {
-    top: 50px;
-    right: 65px;
-    bottom: 50px;
-    left: 65px;
-  }
-
   .clients .container {
     grid-template-columns: repeat(auto-fill , minmax(100px , 1fr));
   }
@@ -3346,7 +3315,7 @@ ul {
   }
 
   .blog .box .info h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .blog-content .info .box .pain p {
@@ -3391,13 +3360,15 @@ ul {
     padding: 7px 10px;
   }
 
-  .value .container,
+  .counter .container,
   .services .container,
   .blog .container,
-  .testimonials .container,
-  .portfolio .container {
-    gap: 30px;
-    margin-left: 0;
+  .pricing .container {
+    grid-template-columns: repeat(auto-fill , minmax(275px , 1fr));
+  }
+
+  .value .container {
+    grid-template-columns: repeat(auto-fill , minmax(277px , 1fr));
   }
 
 }
